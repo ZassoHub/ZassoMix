@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Jukebox MV Player</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('jukebox_background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: sans-serif;
+    }
+    .button-container {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    button {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button onclick="playRandomMV()">PLAY</button>
+  </div>
+  <script>
+    const mvLinks = [
+      "https://www.instagram.com/reel/CzixYAlSb-Q/",
+      "https://www.instagram.com/reel/C1ByMw9Szq7/",
+      "https://www.instagram.com/reel/C1HdXsWyozR/",
+      "https://www.instagram.com/reel/C1NkWPKy89B/",
+      "https://www.instagram.com/reel/C1bMXFeyDj1/",
+      "https://www.instagram.com/reel/C1eql-ESnM4/",
+      "https://www.instagram.com/reel/C1h6lv6SeIp/"
+    ];
+    function playRandomMV() {
+      const randomLink = mvLinks[Math.floor(Math.random() * mvLinks.length)];
+      window.open(randomLink, '_blank');
+    }
+  </script>
+</body>
+</html>
