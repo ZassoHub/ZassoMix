@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Neon Jukebox MV</title>
+    <style>
+        body {
+            margin: 0;
+            background: url('jukebox_background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+        }
+        .button {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background: #ff0099;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 0 15px #ff0099, 0 0 30px #ff0099, 0 0 60px #ff0099;
+            cursor: pointer;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="playRandomMV()">PLAY</button>
+
+    <script>
+        const mvLinks = [
+            'https://www.instagram.com/reel/DHeWlA-h446/?igsh=dXFqdGpnY2d1N2M1',
+            'https://www.instagram.com/reel/DHfuJXKvhH9/?igsh=MWY1YTEwZXY0cmhxdQ==',
+            'https://www.instagram.com/reel/DHnNfaVxCbz/?igsh=MnppY2dnMG1oeDZy',
+            'https://www.instagram.com/reel/DHnPK3BxEOQ/?igsh=MWhzeXExZGR2bW1kNw==',
+            'https://www.instagram.com/reel/DHn-8UOBj8L/?igsh=MTZneGloeXN6YTZyYw==',
+            'https://www.instagram.com/reel/DHsoL4YPtMD/?igsh=bGlqeW9qaHlsa205',
+            'https://www.instagram.com/reel/DHveUBwhXKp/?igsh=aGMyYWlyM2U5a2xo'
+        ];
+
+        function playRandomMV() {
+            const randomIndex = Math.floor(Math.random() * mvLinks.length);
+            window.open(mvLinks[randomIndex], '_blank');
+        }
+    </script>
+</body>
+</html>
