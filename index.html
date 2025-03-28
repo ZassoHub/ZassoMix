@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>雑草Mシャッフル</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background-color: #f3f3f3;
+      margin-top: 100px;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    button {
+      font-size: 24px;
+      padding: 15px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #playBtn {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>雑草M シャッフル</h1>
+  <button id="playBtn" onclick="openRandom()">▶ ランダム再生</button>
+
+  <script>
+    const urls = [
+      "https://www.instagram.com/reel/XXXXX/", // MV1
+      "https://www.instagram.com/reel/YYYYY/", // MV2
+      "https://www.instagram.com/reel/ZZZZZ/"  // MV3
+    ];
+    function openRandom() {
+      const randomUrl = urls[Math.floor(Math.random() * urls.length)];
+      window.open(randomUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
