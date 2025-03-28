@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>雑草Mシャッフル</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
+      font-family: 'Arial', sans-serif;
       text-align: center;
-      font-family: sans-serif;
-      background-color: #f3f3f3;
       margin-top: 100px;
+      background-color: #f3f3f3;
     }
     h1 {
       font-size: 28px;
@@ -30,14 +31,19 @@
 </head>
 <body>
   <h1>雑草M シャッフル</h1>
-  <button id="playBtn" onclick="openRandom()">▶ ランダム再生</button>
+  <button id="playBtn" onclick="openRandom()">▶ランダム再生</button>
 
   <script>
     const urls = [
-      "https://www.instagram.com/reel/XXXXX/", // MV1
-      "https://www.instagram.com/reel/YYYYY/", // MV2
-      "https://www.instagram.com/reel/ZZZZZ/"  // MV3
+      "https://www.instagram.com/reel/DHeWlA-h446/?igsh=dXFqdGpnY2d1N2M1",
+      "https://www.instagram.com/reel/DHfuJXKvhH9/?igsh=MWY1YTEwZXY0cmhxdQ==",
+      "https://www.instagram.com/reel/DHnNfaVxCbz/?igsh=MnppY2dnMG1oeDZy",
+      "https://www.instagram.com/reel/DHnPK3BxEOQ/?igsh=MWhzeXExZGR2bW1kNw==",
+      "https://www.instagram.com/reel/DHn-8UOBj8L/?igsh=MTZneGloeXN6YTZyYw==",
+      "https://www.instagram.com/reel/DHsoL4YPtMD/?igsh=bGlqeW9qaHlsa205",
+      "https://www.instagram.com/reel/DHveUBwhXKp/?igsh=aGMyYWlyM2U5a2xo"
     ];
+
     function openRandom() {
       const randomUrl = urls[Math.floor(Math.random() * urls.length)];
       window.open(randomUrl, '_blank');
