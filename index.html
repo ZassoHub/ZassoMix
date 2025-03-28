@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>草MVシャッフル</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('bg_camp.png');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'sans-serif';
+    }
+    #message {
+      text-align: center;
+      background-color: rgba(255,255,255,0.7);
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .grass-button {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      background-color: white;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 36px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="message">今日の運命の草MVを選んでね♥</div>
+  <script>
+    const mvLinks = [
+      "https://www.instagram.com/reel/XXXXXXXX1/",
+      "https://www.instagram.com/reel/XXXXXXXX2/",
+      "https://www.instagram.com/reel/XXXXXXXX3/"
+    ];
+    const icons = ["☘️", "🌿", "🍀", "🌱", "🍂", "🌸", "🌻", "🍁", "🌾", "🌷", "🌼", "🪻"];
+    const positions = [
+      [40, 300], [100, 400], [160, 450], [220, 390], [280, 480], [340, 420],
+      [400, 460], [460, 350], [520, 430], [580, 410], [640, 460], [700, 390]
+    ];
+    for (let i = 0; i < icons.length; i++) {
+      let btn = document.createElement("div");
+      btn.className = "grass-button";
+      btn.innerText = icons[i];
+      btn.style.left = positions[i][0] + "px";
+      btn.style.top = positions[i][1] + "px";
+      btn.onclick = function() {
+        const randomLink = mvLinks[Math.floor(Math.random() * mvLinks.length)];
+        window.location.href = randomLink;
+      };
+      document.body.appendChild(btn);
+    }
+  </script>
+</body>
+</html>
