@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>雑草MVセレクター</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: url('zasso_rpg_icons_preview.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: sans-serif;
+  }
+  .button {
+    position: absolute;
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    padding: 6px;
+    text-align: center;
+    cursor: pointer;
+  }
+</style>
+<script>
+function goToRandomMV() {
+  const links = [
+    "https://www.instagram.com/reel/1",
+    "https://www.instagram.com/reel/2",
+    "https://www.instagram.com/reel/3",
+    "https://www.instagram.com/reel/4",
+    "https://www.instagram.com/reel/5"
+  ];
+  const randomIndex = Math.floor(Math.random() * links.length);
+  window.open(links[randomIndex], "_blank");
+}
+</script>
+</head>
+<body>
+<div class="button" style="left:427px; top:867px;" onclick="goToRandomMV()">🌿</div>
+<div class="button" style="left:506px; top:769px;" onclick="goToRandomMV()">☘️</div>
+<div class="button" style="left:277px; top:981px;" onclick="goToRandomMV()">🍀</div>
+<div class="button" style="left:622px; top:1143px;" onclick="goToRandomMV()">🌱</div>
+<div class="button" style="left:339px; top:1075px;" onclick="goToRandomMV()">🌼</div>
+</body>
+</html>
